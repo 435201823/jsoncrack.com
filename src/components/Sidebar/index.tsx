@@ -177,14 +177,14 @@ export const Sidebar: React.FC = () => {
   return (
     <StyledSidebar>
       <StyledTopWrapper>
-        <Link passHref href="/">
+        {/* <Link passHref href="/">
           <StyledElement onClick={() => push("/")}>
             <StyledLogo>
               <StyledText>J</StyledText>
               <StyledText secondary>C</StyledText>
             </StyledLogo>
           </StyledElement>
-        </Link>
+        </Link> */}
         <Tooltip className="mobile" title="Edit JSON">
           <StyledElement onClick={() => setConfig("hideEditor", !hideEditor)}>
             <AiOutlineEdit />
