@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "src/containers/Home";
+import Editor from "src/pages/Editor";
 
 const HomePage = () => {
-  return <Home />;
+  return <Editor />;
 };
 
 export default HomePage;
