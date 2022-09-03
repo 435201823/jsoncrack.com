@@ -237,29 +237,6 @@ export const Sidebar: React.FC = () => {
           </StyledElement>
         </Tooltip>
       </StyledTopWrapper>
-      <StyledBottomWrapper>
-        <StyledElement>
-          <Link href="https://twitter.com/aykutsarach">
-            <a aria-label="Twitter" rel="me" target="_blank">
-              <AiOutlineTwitter />
-            </a>
-          </Link>
-        </StyledElement>
-        <StyledElement>
-          <Link href="https://github.com/AykutSarac/jsoncrack.com">
-            <a aria-label="GitHub" rel="me" target="_blank">
-              <AiFillGithub />
-            </a>
-          </Link>
-        </StyledElement>
-        <StyledElement>
-          <Link href="https://github.com/sponsors/AykutSarac">
-            <a aria-label="GitHub Sponsors" rel="me" target="_blank">
-              <HiHeart />
-            </a>
-          </Link>
-        </StyledElement>
-      </StyledBottomWrapper>
       <ImportModal visible={uploadVisible} setVisible={setUploadVisible} />
       <ClearModal visible={clearVisible} setVisible={setClearVisible} />
       <ShareModal visible={shareVisible} setVisible={setShareVisible} />
