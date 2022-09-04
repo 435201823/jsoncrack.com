@@ -166,7 +166,7 @@ export const Sidebar: React.FC = () => {
 
   const toggleExpandCollapse = () => {
     setConfig("expand", !expand);
-    toast(`${expand ? "Collapsed" : "Expanded"} nodes.`);
+    toast(`${expand ? "收缩" : "展开"}节点.`);
   };
 
   const toggleLayout = () => {
@@ -185,53 +185,47 @@ export const Sidebar: React.FC = () => {
             </StyledLogo>
           </StyledElement>
         </Link> */}
-        <Tooltip className="mobile" title="Edit JSON">
+        <Tooltip className="mobile" title="编辑JSON">
           <StyledElement onClick={() => setConfig("hideEditor", !hideEditor)}>
             <AiOutlineEdit />
           </StyledElement>
         </Tooltip>
-        <Tooltip title="Import File">
+        <Tooltip title="导入文件">
           <StyledElement onClick={() => setUploadVisible(true)}>
             <AiOutlineFileAdd />
           </StyledElement>
         </Tooltip>
-        <Tooltip title="Rotate Layout">
+        <Tooltip title="旋转视图">
           <StyledElement onClick={toggleLayout}>
             <StyledFlowIcon rotate={rotateLayout(layout)} />
           </StyledElement>
         </Tooltip>
-        <Tooltip className="mobile" title="Center View">
+        <Tooltip className="mobile" title="居中视图">
           <StyledElement onClick={centerView}>
             <MdCenterFocusWeak />
           </StyledElement>
         </Tooltip>
-        <Tooltip
-          className="desktop"
-          title={expand ? "Shrink Nodes" : "Expand Nodes"}
-        >
-          <StyledElement
-            title="Toggle Expand/Collapse"
-            onClick={toggleExpandCollapse}
-          >
+        <Tooltip className="desktop" title={expand ? "收缩节点" : "展开节点"}>
+          <StyledElement title="收缩/展开 节点" onClick={toggleExpandCollapse}>
             {expand ? <CgArrowsMergeAltH /> : <CgArrowsShrinkH />}
           </StyledElement>
         </Tooltip>
-        <Tooltip className="desktop" title="Save JSON">
+        <Tooltip className="desktop" title="保存JSON">
           <StyledElement onClick={handleSave}>
             <AiOutlineSave />
           </StyledElement>
         </Tooltip>
-        <Tooltip className="mobile" title="Download Image">
+        <Tooltip className="mobile" title="下载图片">
           <StyledElement onClick={() => setDownloadVisible(true)}>
             <FiDownload />
           </StyledElement>
         </Tooltip>
-        <Tooltip title="Clear JSON">
+        <Tooltip title="清空JSON">
           <StyledElement onClick={() => setClearVisible(true)}>
             <AiOutlineDelete />
           </StyledElement>
         </Tooltip>
-        <Tooltip className="desktop" title="Share">
+        <Tooltip className="desktop" title="分享">
           <StyledElement onClick={() => setShareVisible(true)}>
             <AiOutlineLink />
           </StyledElement>

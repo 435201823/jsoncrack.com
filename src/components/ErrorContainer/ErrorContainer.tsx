@@ -67,7 +67,7 @@ export const ErrorContainer = ({ error }: { error: string }) => {
           ) : (
             <MdOutlineCheckCircleOutline size={20} />
           )}
-          {error ? "Error" : "JSON Valid"}
+          {error ? "JSON解析失败" : "JSON解析成功"}
         </StyledTitle>
         {error &&
           (isErrorExpanded ? (

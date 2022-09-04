@@ -65,39 +65,38 @@ export const ShareModal: React.FC<ModalProps> = ({ visible, setVisible }) => {
 
   return (
     <Modal visible={visible} setVisible={setVisible}>
-      <Modal.Header>Create a Share Link</Modal.Header>
+      <Modal.Header>创建分享链接</Modal.Header>
       <Modal.Content>
         {encodedJson.length > 5000 ? (
           <StyledErrorWrapper>
             <BiErrorAlt size={60} />
             <StyledWarning>
-              Link size exceeds 5000 characters, unable to generate link for
-              file of this size!
+              链接大小已超出5000个字符，无法生成链接
             </StyledWarning>
           </StyledErrorWrapper>
         ) : (
           <>
             <StyledContainer>
-              Share Link
+              分享链接
               <StyledFlex>
                 <Input value={shareURL} type="url" readOnly />
                 <Button
                   status="SECONDARY"
                   onClick={() => handleShare(shareURL)}
                 >
-                  Copy
+                  复制
                 </Button>
               </StyledFlex>
             </StyledContainer>
             <StyledContainer>
-              Embed into your website
+              嵌入到您的网站
               <StyledFlex>
                 <Input value={embedText} type="url" readOnly />
                 <Button
                   status="SECONDARY"
                   onClick={() => handleShare(embedText)}
                 >
-                  Copy
+                  复制
                 </Button>
               </StyledFlex>
             </StyledContainer>

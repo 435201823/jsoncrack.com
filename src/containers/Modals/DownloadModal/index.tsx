@@ -105,7 +105,7 @@ export const DownloadModal: React.FC<ModalProps> = ({
 
   const clipboardImage = async () => {
     try {
-      toast.loading("Copying to clipboard...", { id: "toastClipboard" });
+      toast.loading("复制到剪切板中...", { id: "toastClipboard" });
       setConfig("performanceMode", false);
 
       const imageElement = document.querySelector(
@@ -125,9 +125,9 @@ export const DownloadModal: React.FC<ModalProps> = ({
         }),
       ]);
 
-      toast.success("Copied to clipboard");
+      toast.success("已复制到剪切板");
     } catch (error) {
-      toast.error("Failed to copy to clipboard");
+      toast.error("复制到剪切板失败");
     } finally {
       toast.dismiss("toastClipboard");
       setVisible(false);
@@ -137,7 +137,7 @@ export const DownloadModal: React.FC<ModalProps> = ({
 
   const exportAsImage = async () => {
     try {
-      toast.loading("Downloading...", { id: "toastDownload" });
+      toast.loading("下载中...", { id: "toastDownload" });
       setConfig("performanceMode", false);
 
       const imageElement = document.querySelector(
@@ -151,7 +151,7 @@ export const DownloadModal: React.FC<ModalProps> = ({
 
       downloadURI(dataURI, `${fileDetails.filename}.png`);
     } catch (error) {
-      toast.error("Failed to download image!");
+      toast.error("下载图片失败!");
     } finally {
       toast.dismiss("toastDownload");
       setVisible(false);
@@ -166,20 +166,20 @@ export const DownloadModal: React.FC<ModalProps> = ({
 
   return (
     <Modal visible={visible} setVisible={setVisible}>
-      <Modal.Header>Download Image</Modal.Header>
+      <Modal.Header>下载图片</Modal.Header>
       <Modal.Content>
         <StyledContainer>
-          File Name
+          文件名
           <StyledColorWrapper>
             <Input
-              placeholder="File Name"
+              placeholder="请输入文件名"
               value={fileDetails.filename}
               onChange={(e) => updateDetails("filename", e.target.value)}
             />
           </StyledColorWrapper>
         </StyledContainer>
         <StyledContainer>
-          Background Color
+          背景色
           <StyledColorWrapper>
             <TwitterPicker
               triangle="hide"
@@ -196,11 +196,11 @@ export const DownloadModal: React.FC<ModalProps> = ({
       </Modal.Content>
       <Modal.Controls setVisible={setVisible}>
         <Button status="SECONDARY" onClick={clipboardImage}>
-          <FiCopy size={18} /> Clipboard
+          <FiCopy size={18} /> 复制
         </Button>
         <Button status="SUCCESS" onClick={exportAsImage}>
           <FiDownload size={18} />
-          Download
+          下载
         </Button>
       </Modal.Controls>
     </Modal>
