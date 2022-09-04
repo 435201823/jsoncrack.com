@@ -35,14 +35,14 @@ export const NodeModal = ({
     : selectedNode;
 
   const handleClipboard = () => {
-    toast.success("Content copied to clipboard!");
+    toast.success("复制节点信息成功!");
     navigator.clipboard.writeText(JSON.stringify(nodeData));
     closeModal();
   };
 
   return (
     <Modal visible={visible} setVisible={closeModal}>
-      <Modal.Header>Node Content</Modal.Header>
+      <Modal.Header>节点信息</Modal.Header>
       <Modal.Content>
         <StyledTextarea
           defaultValue={JSON.stringify(
@@ -58,7 +58,7 @@ export const NodeModal = ({
       </Modal.Content>
       <Modal.Controls setVisible={closeModal}>
         <Button status="SECONDARY" onClick={handleClipboard}>
-          <FiCopy size={18} /> Clipboard
+          <FiCopy size={18} /> 复制
         </Button>
       </Modal.Controls>
     </Modal>

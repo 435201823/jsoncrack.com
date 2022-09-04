@@ -27,11 +27,8 @@ const EditorPage: React.FC = () => {
   return (
     <StyledEditorWrapper>
       <Head>
-        <title>Editor | JSON Crack</title>
-        <meta
-          name="description"
-          content="View your JSON data in graphs instantly."
-        />
+        <title>编辑 | JSON可视化</title>
+        <meta name="description" content="立即在图表中查看JSON数据." />
       </Head>
       <StyledPageWrapper>
         <Sidebar />

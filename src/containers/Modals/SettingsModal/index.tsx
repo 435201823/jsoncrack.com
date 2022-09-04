@@ -29,17 +29,17 @@ export const SettingsModal: React.FC<{
 
   return (
     <Modal visible={visible} setVisible={setVisible}>
-      <Modal.Header>Settings</Modal.Header>
+      <Modal.Header>设置</Modal.Header>
       <Modal.Content>
         <StyledModalWrapper>
           <StyledToggle onChange={toggleHideCollapse} checked={hideCollapse}>
-            Hide Collapse/Expand Button
+            隐藏收缩/展开按钮
           </StyledToggle>
           <StyledToggle
             onChange={() => setLightTheme(!lightmode)}
             checked={lightmode}
           >
-            Enable Light Theme
+            明亮模式
           </StyledToggle>
         </StyledModalWrapper>
       </Modal.Content>
