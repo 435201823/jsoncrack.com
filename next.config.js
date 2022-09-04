@@ -14,6 +14,7 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  basePath: "/jsoncrack",
   reactStrictMode: true,
   exportPathMap: async () => ({
     "/": { page: "/" },
