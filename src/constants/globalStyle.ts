@@ -12,15 +12,13 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     height: 100%;
 
-    background-color: #000000;
+    background-color: #1c1f25;
     opacity: 1;
-    background-image: radial-gradient(#414141 0.5px, #000000 0.5px);
     background-size: 10px 10px;
 
     @media only screen and (min-width: 768px) {
-      background-color: #000000;
+      background-color: #1c1f25;
       opacity: 1;
-      background-image: radial-gradient(#414141 0.5px, #000000 0.5px);
       background-size: 15px 15px;
     }
   }

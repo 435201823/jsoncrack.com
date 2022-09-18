@@ -14,12 +14,11 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  basePath: "/jsoncrack",
   reactStrictMode: true,
+  exportTrailingSlash: true,
   exportPathMap: async () => ({
     "/": { page: "/" },
     "/editor": { page: "/Editor" },
-    "/widget": { page: "/Widget" },
   }),
   //...pwaConfig,
 };
